@@ -1,318 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Hossein Badiei - Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .edu-item {
-                display: flex;
-                align-items: center;
-                margin-bottom: 10px;
-            }
-        
-            .circle {
-                width: 12px;
-                height: 12px;
-                background-color: black;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-        
-            .edu-item h4 {
-                margin: 0;
-                font-size: 16px;
-                font-weight: bold;
-            }
-                
-            .edu-item h5 {
-                margin: 0;
-            }
-
-            .edu-item p {
-                margin: 2px 0;
-                font-size: 14px;
-            }
-
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .header .text {
-            max-width: 60%;
-        }
-
-        .header img {
-            max-width: 30%;
-            border-radius: 8px;
-        }
-
-        h1, h2 {
-            color: #444;
-        }
-
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .scholar-link img {
-            width: 24px;
-            vertical-align: middle;
-        }
-
-        .bio {
-            margin-top: 30px;
-            line-height: 1.6;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Mohammad Hossein Badiei — AI researcher working on robust optimization, information theory, federated learning, computer vision, and robotics." />
+  <title>Mohammad Hossein Badiei — AI Researcher</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#07090d;--panel:#0d1117;--panel2:#111720;--text:#f4f7fb;--muted:#98a2b3;--line:#202938;--accent:#88a8ff;--accent2:#70e0c1;--max:1160px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(900px 500px at 12% -10%,rgba(94,123,255,.18),transparent 60%),radial-gradient(800px 500px at 100% 20%,rgba(76,224,187,.10),transparent 60%),var(--bg);color:var(--text);font:15px/1.7 Inter,system-ui,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 26px}.nav{position:sticky;top:0;z-index:20;background:rgba(7,9,13,.78);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}.navin{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 15px Manrope}.brand span{color:var(--accent2)}.links{display:flex;gap:24px;color:#c5ced9;font-size:13px}.links a:hover{color:white}
+    .hero{padding:94px 0 70px}.heroGrid{display:grid;grid-template-columns:1.5fr .7fr;gap:56px;align-items:center}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--accent2);font-weight:700}.hero h1{font:800 clamp(45px,7vw,84px)/.98 Manrope;margin:14px 0 18px;letter-spacing:-.055em}.gradient{background:linear-gradient(100deg,#fff 15%,#a9bfff 55%,#78e0c5);-webkit-background-clip:text;color:transparent}.lead{max-width:760px;font-size:18px;line-height:1.75;color:#b9c2ce}.chips,.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.chip{border:1px solid var(--line);background:rgba(255,255,255,.025);padding:8px 12px;border-radius:999px;color:#bac4d0;font-size:12px}.btn{display:inline-flex;align-items:center;gap:9px;padding:11px 15px;border-radius:10px;border:1px solid var(--line);background:#111722;font-weight:600;font-size:13px}.btn.primary{background:#edf2ff;color:#0a0d12;border-color:#edf2ff}.btn:hover{transform:translateY(-1px)}
+    .portraitWrap{position:relative}.portrait{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;filter:saturate(.88) contrast(1.05);border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px rgba(0,0,0,.35)}.portraitWrap:after{content:"";position:absolute;inset:auto -12px -12px 25%;height:54%;border:1px solid rgba(112,224,193,.35);border-radius:24px;z-index:-1}
+    section{padding:72px 0;border-top:1px solid rgba(255,255,255,.065)}.sectionHead{display:grid;grid-template-columns:220px 1fr;gap:40px;margin-bottom:35px}.kicker{font-size:12px;color:var(--accent2);text-transform:uppercase;letter-spacing:.16em;font-weight:700}.sectionHead h2{font:700 clamp(28px,4vw,44px)/1.12 Manrope;margin:0;letter-spacing:-.035em}.muted{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:16px;padding:22px}.card .year{font-size:12px;color:var(--accent2);font-weight:700}.card h3{font:700 17px/1.4 Manrope;margin:8px 0}.card p{margin:0;color:var(--muted);font-size:13px}.metric{margin-top:16px;color:#dbe3ef;font-size:12px}
+    .timeline{display:grid;gap:12px}.edu{display:grid;grid-template-columns:118px 1fr auto;gap:20px;align-items:start;padding:20px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}.edu .date{color:var(--accent2);font-size:12px;font-weight:700}.edu h3{font:700 16px Manrope;margin:0 0 5px}.edu p{margin:0;color:var(--muted);font-size:13px}.edu .gpa{font-size:12px;color:#d6deea;text-align:right}
+    .awards{display:grid;grid-template-columns:1fr 1fr;gap:12px}.award{padding:17px 18px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.018);display:grid;grid-template-columns:42px 1fr;gap:12px}.awardN{width:34px;height:34px;border-radius:9px;background:rgba(136,168,255,.12);display:grid;place-items:center;color:#b6c8ff;font-weight:700}.award h3{font-size:14px;margin:0 0 3px}.award p{font-size:12px;color:var(--muted);margin:0}
+    .pubs{display:grid;gap:11px}.pub{display:grid;grid-template-columns:62px 1fr 90px;gap:18px;padding:20px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.018);transition:.2s}.pub:hover{background:rgba(255,255,255,.035);border-color:#344056}.pub .num{font:700 12px Manrope;color:#718096}.pub h3{font:700 15px/1.45 Manrope;margin:0 0 7px}.pub .authors,.pub .venue{color:var(--muted);font-size:12px}.pub .venue{margin-top:4px;color:#b8c3d1}.pub .cite{text-align:right;font-size:12px;color:#c7d1df}.pub .cite strong{display:block;font:700 22px Manrope;color:var(--text)}
+    footer{padding:40px 0 70px;color:#798493;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:24px}
+    @media(max-width:850px){.links{display:none}.hero{padding-top:62px}.heroGrid{grid-template-columns:1fr}.portraitWrap{max-width:320px}.sectionHead{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.awards{grid-template-columns:1fr}.edu{grid-template-columns:1fr}.edu .gpa{text-align:left}.pub{grid-template-columns:42px 1fr}.pub .cite{grid-column:2;text-align:left}.pub .cite strong{display:inline;font-size:12px}.foot{flex-direction:column}}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="text">
-                <h1>Mohammad Hossein Badiei</h1>
-                <h3>Graduate of Simultaneous Honours Degrees in Computer Engineering & Electrical Engineering</h3>
-                <p><strong>Department:</strong> ECE Department, Tehran University</p>
-                <p><a href="https://scholar.google.com/citations?user=qHx4UecAAAAJ&hl=en&oi=sra" target="_blank" class="scholar-link">
-                    <img src="./images/google-scholar-icon.png" alt="Google Scholar Logo"> <strong>Google Scholar</strong> 
-                </a></p>
-                <p> <a href="mailto:mho.badiei@gmail.com"   target="_blank" class="scholar-link"> <img src="./images/email-icon.png"> <strong>Email: mho.badiei@gmail.com</strong></a></p>
-                <!-- <p> <a href="#" target="_blank" class="scholar-link"> <img src="./images/resume-icon.png"> <strong>Résumé</strong></a></p> -->
-                <p> <a href="https://github.com/mhbadiei/" target="_blank" class="scholar-link"> <img src="./images/github-icon.png"> <strong>Github</strong></a></p>
-            </div>
-            <img src="./images/mhbadiei.jpg" alt="Your Photo">
-        </div>
-    </tbody></table> 
-    <p>
-    </p><hr size="1" align="left" noshade="">
-    <p>
+<header class="nav"><div class="wrap navin"><a class="brand" href="#top">MHB<span>.</span></a><nav class="links"><a href="#about">About</a><a href="#education">Education</a><a href="#awards">Awards</a><a href="#publications">Publications</a></nav></div></header>
+<main id="top">
+  <div class="wrap hero"><div class="heroGrid"><div>
+    <div class="eyebrow">AI Researcher · Robust & Distributed Intelligence</div>
+    <h1>Mohammad Hossein <span class="gradient">Badiei</span></h1>
+    <p class="lead">I work on robust optimization, information theory, federated learning, computer vision, and robotics, with a focus on building learning systems that remain reliable under uncertainty, heterogeneity, and adversarial conditions.</p>
+    <div class="chips"><span class="chip">Robust Optimization</span><span class="chip">Information Theory</span><span class="chip">Federated Learning</span><span class="chip">Computer Vision</span><span class="chip">Robotics</span></div>
+    <div class="actions"><a class="btn primary" href="https://scholar.google.com/citations?user=qHx4UecAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar ↗</a><a class="btn" href="https://github.com/mhbadiei/" target="_blank">GitHub ↗</a><a class="btn" href="mailto:mho.badiei@gmail.com">Email</a><a class="btn" href="./Mohammad_Hossein_Badiei_CV.pdf" target="_blank">CV ↗</a></div>
+  </div><div class="portraitWrap"><img class="portrait" src="./images/mhbadiei.jpg" alt="Mohammad Hossein Badiei"></div></div></div>
 
-        <div class="bio">
-           <h2> <div style="float: left; font-weight: bold; margin-right: 35px;">
-                About Me.
-            </div></h2>
-            <p>
-                I have completed simultaneous honours tri-degrees (totally 5 degrees, including 2 honours, over 6 years) in Computer Engineering and Electrical Engineering at Tehran University and Tehran Polytechnic. In 2021, I won the gold medal in the National Olympiad for Electrical Engineering. Additionally, I was awarded a full scholarship for an AI internship at Tsinghua University, China. I ranked 1st in the 6th Young Scientists Festival in Math and CS, and was recognized as a UNESCO Distinguished Young Scientist last year.
-                During my studies, I was fortunate to work with MB. Menhaj, Hamed Kebriaei, Md. Jalil Piran, Nguyen H. Tran, and others. I am joining the Tencent Research Institute in Shenzhen, China, as an AI researcher, collaborating with an incredibly talented and dynamic development team on the Hunyuan generative model. My research will focus on enhancing efficiency, advancing generalization, and AI alignment using generative bayesian optimization.
-            </p>
-        </div>
+  <section id="about"><div class="wrap"><div class="sectionHead"><div class="kicker">01 / Profile</div><div><h2>Research at the intersection of learning, optimization, and trustworthy autonomy.</h2><p class="muted">My work spans robust and decentralized learning, adversarial resilience, generative modeling, autonomous systems, and AI for science. I am particularly interested in methods that combine theoretical structure with deployment-aware machine learning.</p></div></div>
+  <div class="cards"><div class="card"><div class="year">RESEARCH</div><h3>Robust & Federated Learning</h3><p>Resilience to poisoning, heterogeneity, uncertainty, and distributed decision-making constraints.</p></div><div class="card"><div class="year">INTELLIGENCE</div><h3>Generative & Vision Models</h3><p>Generative modeling and vision systems for scientific, biomedical, and engineering applications.</p></div><div class="card"><div class="year">AUTONOMY</div><h3>Optimization & Robotics</h3><p>Constrained planning, model predictive control, and uncertainty-aware autonomous systems.</p></div></div></div></section>
 
-        <div class="bio">
-            <h2><div style="font-weight: bold; margin-right: 35px;">
-                Education. 
-            </div></h2>
-            <h3> Graduate of a Simultaneous Tri-Degree Program (+Two Honours Degrees):</h3>
-            
-            <!-- M.Sc. Item -->
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>M.Sc. in Electrical & Computer Engineering, University of Tehran</h4>
-            </div>
-            <p>GPA: 17.66 (20.00 scale) | US GPA: 3.88 (4.00 scale)</p>
-            
-            
-            <!-- B.Sc. Computer Engineering Item -->
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>B.Sc. (+Honours) in Computer Engineering (Dual-Degree), Tehran Polytechnic (AUT)</h4>
-            </div>
-            <p>GPA: 18.27 (20.00 scale) | US GPA: 3.91 (4.00 scale); Class Rank: Top 3%</p>
-            
-            
-            <!-- B.Sc. Electrical Engineering Item -->
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>B.Sc. (+Honours) in Electrical Engineering (Dual-Degree), Tehran Polytechnic (AUT)</h4>
-            </div>
-            <p>GPA: 18.58 (20.00 scale) | US GPA: 4.00 (4.00 scale); Class Rank: 1st</p>
-        </div>
+  <section id="education"><div class="wrap"><div class="sectionHead"><div class="kicker">02 / Education</div><div><h2>Simultaneous tri-degree program with two honours degrees.</h2></div></div><div class="timeline">
+    <div class="edu"><div class="date">2020–2023</div><div><h3>M.Sc. in Electrical & Computer Engineering</h3><p>University of Tehran · Electrical and Computer Engineering Department</p></div><div class="gpa">GPA 17.66/20<br>US GPA 3.88/4</div></div>
+    <div class="edu"><div class="date">2016–2021</div><div><h3>B.Sc. (+Honours) in Computer Engineering</h3><p>Tehran Polytechnic (Amirkabir University of Technology) · Dual-Degree</p></div><div class="gpa">GPA 18.27/20<br>Top 3%</div></div>
+    <div class="edu"><div class="date">2016–2020</div><div><h3>B.Sc. (+Honours) in Electrical Engineering</h3><p>Tehran Polytechnic (Amirkabir University of Technology) · Dual-Degree</p></div><div class="gpa">GPA 18.58/20<br>Class Rank: 1st</div></div>
+  </div></div></section>
 
+  <section id="awards"><div class="wrap"><div class="sectionHead"><div class="kicker">03 / Recognition</div><div><h2>Selected awards & distinctions.</h2></div></div><div class="awards">
+    <div class="award"><div class="awardN">01</div><div><h3>National Electrical Engineering Olympiad Gold Medal</h3><p>Center of Student Olympiad and International Exam Affairs of Iran · 2021</p></div></div>
+    <div class="award"><div class="awardN">02</div><div><h3>UNESCO Distinguished Young Scientist of Basic Science and Technology</h3><p>UNESCO Club · 2023</p></div></div>
+    <div class="award"><div class="awardN">03</div><div><h3>Full Scholarship for AI Excellence Internship</h3><p>Tsinghua University, China · 2024</p></div></div>
+    <div class="award"><div class="awardN">04</div><div><h3>Ranked 1st — 6th Young Scientists Festival</h3><p>Mathematics and Computer Science · 2022</p></div></div>
+    <div class="award"><div class="awardN">05</div><div><h3>Simultaneous Dual Degree and Dual Level Honors</h3><p>Iran's National Elites Foundation · 2018 & 2020</p></div></div>
+    <div class="award"><div class="awardN">06</div><div><h3>Ranked 1st in the B.Sc. Major</h3><p>Tehran Polytechnic · 2020</p></div></div>
+    <div class="award"><div class="awardN">07</div><div><h3>Best Teaching Assistant Award</h3><p>University of Tehran · 2023</p></div></div>
+  </div></div></section>
 
-        <div class="bio">
-            <h2><div style="font-weight: bold; margin-right: 35px;">
-                Awards. 
-            </div></h2>
-            
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>National Electrical Engineering Olympiad Gold Medal</h4>
-            </div>
-            
-            
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>Simultaneous Dual Degree and Dual Level Honors</h4>
-            </div>
-            
-            
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>Full Scholarship for In-Person AI Excellence Internship, Tsinghua University, China</h4>
-            </div>
-
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>Ranked 1st in the 6th Young Scientists Festival in Mathematics and Computer Science</h4>
-            </div>
-
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>UNESCO Distinguished Young Scientist of Basic Science and Technology</h4>
-            </div>
-
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>Ranked 1st in the BS Major at Tehran Polytechnic</h4>
-            </div>
-
-            <div class="edu-item">
-                <span class="circle"></span>
-                <h4>The Best Teaching Assistant Award for the Year, University of Tehran</h4>
-            </div>
-        </div>
-
-
-
-        <div class="bio">
-            <h2><div style="font-weight: bold; margin-right: 35px;">
-                Publications. 
-            </div></h2>
-
-
-                
-                <div class="edu-item" style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <div class="image" style="flex: 1; text-align: center;">
-                        <img src="./images/Generative Self-Resilient Deep Learning.png" style="max-height: 100px; width: auto; border-radius: 10px;">
-                    </div>
-                    <div class="text" style="flex: 3;">
-                        <h4>1. Few-Shot Generative Self-Resilient Deep Learning</h4>
-                        <p>Mohammad Hossein Badiei, Hamed Kebriaei</p>
-                        <p><em>Achieved Borderline Acceptance Score in Conference on Neural Information Processing Systems</em>, 2024</p>
-                    </div>
-                </div>
-            
-                <div class="edu-item" style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <div class="image" style="flex: 1; text-align: center;">
-                        <img src="./images/Risk-Aware Path Planning.png" style="max-height: 100px; width: auto; border-radius: 10px;">
-                    </div>
-                    <div class="text" style="flex: 3;">
-                        <h4>2. Uncertainty-Aware Path Planning with Multiple Constraints for Autonomous Vehicles Based on Nonlinear Reduced-Order Model Predictive Control</h4>
-                    <p>Mohammad Hossein Badiei, Saeed Mohammadi Dashtaki, Navid Vafamand, Md. Jalil Piran</p>
-                    <p><em>Published In IEEE Transactions on Consumer Electronics, 2024</em></p>
-                    </div>
-                </div>
-            
-                <div class="edu-item" style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <div class="image" style="flex: 1; text-align: center;">
-                        <img src="./images/Resilient Federated Adversarial Learning.png" style="max-height: 100px; width: auto; border-radius: 10px;">
-                    </div>
-                    <div class="text" style="flex: 3;">
-                        <h4>3. Resilient Federated Adversarial Learning with Auxiliary-Classifier GANs and Probabilistic Synthesis for Heterogeneous Environments</h4>
-                    <p>Yasaman Haghbin, Mohammad Hossein Badiei, Nguyen H. Tran, Md. Jalil Piran</p>
-                    <p> <em>Accepted in IEEE Transactions on Network and Service Management</em>, 2025</p>
-                    </div>
-                </div>
-            
-                <div class="edu-item" style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <div class="image" style="flex: 1; text-align: center;">
-                        <img src="./images/Resilient Federated ViTs.png" style="max-height: 100px; width: auto; border-radius: 10px;">
-                    </div>
-                    <div class="text" style="flex: 3;">
-                        <h4>4. Resilient Federated Vision Transformer for Alzheimer’s Disease Prediction with Brain Imaging Data Jittering</h4>
-                        <p>*Mahyar Mohammadi, *Mohammad Hossein Badiei, *Mohammad Mashreghi, Keyvan Kazemi, Hamed Kebriaei (* equal contributions)</p>
-                        <p><em>Under Review in IEEE Transactions on Consumer Electronics, 2025</em></p>
-                    </div>
-                </div>
-
-                <div class="edu-item" style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <div class="image" style="flex: 1; text-align: center;">
-                        <img src="./images/P2P Distributed FL.png" style="max-height: 100px; width: auto; border-radius: 10px;">
-                    </div>
-                    <div class="text" style="flex: 3;">
-                        <h4>5. Robust Peer-to-Peer Federated Learning with Deep Reinforcement Learning-Based Client Selection Against Malicious Client’s Data Poisoning</h4>
-                    <p>Keyvan Kazemi, Mohammad Hossein Badiei, and Hamed Kebriaei</p>
-                    <p><em>Under Review in IEEE Transactions on Artificial Intelligence, 2025</em></p>
-                    </div>
-                </div>
-
-                <div class="edu-item" style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <div class="image" style="flex: 1; text-align: center;">
-                        <img src="./images/AI4Science.png" style="max-height: 100px; width: auto; border-radius: 10px;">
-                    </div>
-                    <div class="text" style="flex: 3;">
-                        <h4>6. Deep Learning-Enabled Design of Thin Ultra-Wideband Metamaterial-based Electromagnetic Absorbers with Polarization and Incident Angle Insensitivity</h4>
-                        <p>Atefe Shahsavaripour, Mohammad Hossein Badiei, Ahmad Kalhor, Leila Yousefi</p>
-                        <p><em>Under Review in Scientific Reports - Nature, 2025</em></p>
-                    </div>
-                </div>
-
-                <div class="edu-item" style="display: flex; align-items: center; margin-bottom: 20px;">
-                    <div class="image" style="flex: 1; text-align: center;">
-                        <img src="festival.jpg" style="max-height: 100px; width: auto; border-radius: 10px;">
-                    </div>
-                    <div class="text" style="flex: 3;">
-                        <h4>7. Few-Shot Federated Structural Resilient Vision Transformers Through Robust Primal-Dual Optimization with Sharpness Aware Minimization</h4>
-                        <p>*Mohammad Mashreghi, *Mohammad Hossein Badiei, Md. Jalil Piran (* equal contributions)</p>
-                    </div>
-                </div>
-
-        </div>
-
-        
-       
-        <div class="bio">
-            <h2><div style="font-weight: bold; margin-right: 35px;">
-                Invited Talks.
-            </div></h2>
-
-                <div class="edu-item" style="display: flex; align-items: center;;">
-                        <h4>1. Uncertainty Quantification in AI Models for Improving Robustness   <a href="https://drive.google.com/file/d/1i_xMTMwUCa6v5p-To8N_0Dk30sV7QzmZ/view" target="_blank" class="scholar-link">  [Slides]</a></h4>
-                </div>
-                <div class="edu-item" style="margin-bottom: 20px;">
-                    <span class="circle"></span>
-                    <p><em>IAI Event 2024, Responsible AI Panel, November 2024</em></p>
-                </div>
-            
-                <div class="edu-item" style="display: flex; align-items: center; ">
-                        <h4>2. Adversarial Optimization in Non-Zero-Sum Games for Robust AI Alignment   <a href="https://drive.google.com/file/d/11X82DZ5YmTMxqV52YlJQUGzhxuojdXLp/view" target="_blank" class="scholar-link">  [Slides]</a></h4>
-                </div>
-                <div class="edu-item" style="margin-bottom: 5px;">
-                    <span class="circle"></span>
-                    <p><em>China Academy of Information and Communications Technology (CAICT) AI Forum, September 2024</em></p>
-                </div>
-                <div class="edu-item" style="margin-bottom: 20px;">
-                    <span class="circle"></span>
-                    <p><em>University of Tehran & Sharif University of Technology, Distributed Optimization Workshop, November 2023</em></p>
-                </div>
-
-
-        </div>
- 
-        
-        
-    </div>
-</body>
-</html>
+  <section id="publications"><div class="wrap"><div class="sectionHead"><div class="kicker">04 / Publications</div><div><h2>Selected publications.</h2><p class="muted">Publication metadata and citation counts below reflect the Google Scholar information supplied for this update.</p></div></div><div class="pubs">
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:u-x6o8ySG0sC"><div class="num">01</div><div><h3>Design of Thin, Wideband Electromagnetic Absorbers with Polarization and Angle Insensitivity Using Deep Learning</h3><div class="authors">A. Shahsavaripour, M. H. Badiei, A. Kalhor, L. Yousefi</div><div class="venue">Scientific Reports 15 (1), 9426 · 2025</div></div><div class="cite"><strong>21</strong> citations</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:9yKSN-GCB0IC"><div class="num">02</div><div><h3>Robust Peer-to-Peer Federated Learning with Deep Reinforcement Learning Based Client Selection Against Data Poisoning Attacks</h3><div class="authors">K. Kazemi, M. H. Badiei, H. Kebriaei</div><div class="venue">IEEE Transactions on Artificial Intelligence 7 (1), 262–271 · 2025</div></div><div class="cite"><strong>8</strong> citations</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:d1gkVwhDpl0C"><div class="num">03</div><div><h3>Resilient Federated Adversarial Learning with Auxiliary-Classifier GANs and Probabilistic Synthesis for Heterogeneous Environments</h3><div class="authors">Y. Haghbin, M. H. Badiei, N. H. Tran, M. J. Piran</div><div class="venue">IEEE Transactions on Network and Service Management 22 (5), 4998–5014 · 2025</div></div><div class="cite"><strong>7</strong> citations</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:u5HHmVD_uO8C"><div class="num">04</div><div><h3>Uncertainty-Aware Path Planning with Multiple Constraints for Autonomous Vehicles Based on Nonlinear Reduced-Order Model Predictive Control</h3><div class="authors">M. H. Badiei, S. M. Dashtaki, N. Vafamand, M. J. Piran</div><div class="venue">IEEE Transactions on Consumer Electronics 71 (2), 3802–3816 · 2024</div></div><div class="cite"><strong>4</strong> citations</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:Tyk-4Ss8FVUC"><div class="num">05</div><div><h3>NeuroAtlas: Benchmarking Foundation Models for Clinical EEG and Brain-Computer Interfaces</h3><div class="authors">K. Kontras, T. Osselaer, S. G. Mouslech, A. I. Karaiskou, G. Gagliardi, et al.</div><div class="venue">arXiv preprint arXiv:2605.14698 · 2026</div></div><div class="cite"><strong>3</strong> citations</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:IjCSPb-OGe4C"><div class="num">06</div><div><h3>Resilient Federated Vision Transformers for Alzheimer's Disease Prediction with Brain Imaging Data Jittering</h3><div class="authors">M. Mohammadi, M. H. Badiei, M. Mashreghi, K. Kazemi, H. Kebriaei</div><div class="venue">IEEE Transactions on Consumer Electronics · 2026</div></div><div class="cite">publication</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:UeHWp8X0CEIC"><div class="num">07</div><div><h3>Partial Federated Primal-Dual Optimization for Network-Based Android Malware Detection</h3><div class="authors">M. Mashreghi, M. H. Badiei</div><div class="venue">2025 IEEE 45th International Conference on Distributed Computing Systems · 2025</div></div><div class="cite">conference</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:2osOgNQ5qMEC"><div class="num">08</div><div><h3>Generative Robust Design of UWB Metamaterial Structures with Polarization and Angular Stability</h3><div class="authors">A. Shahsavaripour, M. H. Badiei, L. Yousefi, A. Kalhor</div><div class="venue">IEEE AP-S/URSI · 2025</div></div><div class="cite">conference</div></a>
+    <a class="pub" target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qHx4UecAAAAJ&citation_for_view=qHx4UecAAAAJ:qjMakFHDy7sC"><div class="num">09</div><div><h3>GAN-Driven Image Generation for Metamaterial Absorbers Using Mean and Variance Encoding</h3><div class="authors">A. Shahsavaripour, M. H. Badiei, L. Yousefi, A. Kalhor</div><div class="venue">33rd International Conference on Electrical Engineering (ICEE), 99–103 · 2025</div></div><div class="cite">conference</div></a>
+  </div></div></section>
+</main>
+<footer><div class="wrap foot"><div>© 2026 Mohammad Hossein Badiei</div><div>AI · Robustness · Distributed Learning</div></div></footer>
+</body></html>
